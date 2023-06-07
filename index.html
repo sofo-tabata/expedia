@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caribbean cruises</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-lg py-2">
+            <a class="navbar-brand" href="#"><img src="files/logo.svg" alt="Expedia Logo"></a>
+            <ul class="menu navbar-nav mb-0 flex-row">
+                <li class="nav-item dropdown d-flex">
+                    <a class="nav-link dropdown-toggle d-inline-block" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span class="xsmall">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </span>
+                        <span class="large">More travel</span>
+                    </a>
+                    <ul class="dropdown-menu position-absolute">
+                        <li><a class="dropdown-item" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                                    class="bi bi-buildings-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5V.5ZM2 11h1v1H2v-1Zm2 0h1v1H4v-1Zm-1 2v1H2v-1h1Zm1 0h1v1H4v-1Zm9-10v1h-1V3h1ZM8 5h1v1H8V5Zm1 2v1H8V7h1ZM8 9h1v1H8V9Zm2 0h1v1h-1V9Zm-1 2v1H8v-1h1Zm1 0h1v1h-1v-1Zm3-2v1h-1V9h1Zm-1 2h1v1h-1v-1Zm-2-4h1v1h-1V7Zm3 0v1h-1V7h1Zm-2-2v1h-1V5h1Zm1 0h1v1h-1V5Z" />
+                                </svg>
+                                Stays
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849Z" />
+                                </svg>
+                                Flights
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17 1.247 0 3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                                </svg>
+                                Cars
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-box-seam-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003 6.97 2.789ZM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461L10.404 2Z" />
+                                </svg>
+                                Packages
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-ticket-detailed-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5Zm4 1a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5Zm0 5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7a.5.5 0 0 0-.5.5ZM4 8a1 1 0 0 0 1 1h6a1 1 0 1 0 0-2H5a1 1 0 0 0-1 1Z" />
+                                </svg>
+                                Things to do
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">
+
+                                <svg width="20" height="20" fill="currentColor"
+                                    class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <svg>
+                                        <path
+                                            d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                        </path>
+                                    </svg>
+                                </svg>
+                                Cruises
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Deals</a></li>
+                        <li><a class="dropdown-item" href="#">Groups & meetings</a></li>
+                    </ul>
+                </li>
+                <ul class="items d-flex list-unstyled">
+                    <li class="dissapear nav-item">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor"
+                                class="me-1 pb-1 bi bi-globe2" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z" />
+                            </svg>
+                            English</a>
+                    </li>
+                    <li class="dissapear nav-item">
+                        <a class="nav-link" href="#">List your property</a>
+                    </li>
+
+                    <li class="dissapear nav-item">
+                        <a class="nav-link">Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <span class="medium">Trips</span>
+                            <span class="small"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z" />
+                                    <path
+                                        d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="bell nav-item">
+                        <a class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                            </svg></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <span class="medium">Sign in</span>
+                            <span class="small"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </nav>
+    <div class="modalBtn mt-3">
+        <button type="button" class="whiteBtn flex-grow-1 m-4">
+            sort &amp; Filter
+        </button>
+    </div>
+    <main>
+        <div class="container-lg d-flex p-0">
+            <div class="container-lg flex-wrap p-0">
+                <form action="https://www.expedia.com/Cruise-Search"
+                    class="topForm d-lg-flex mt-3 ms-2 me-4 full-width">
+                    <div class="scrollable-dropdown position-relative formDropdown dropdown">
+                        <label for="location" class="mergedLabel">Going to</label>
+                        <button type="button" id="location" class="btn btn-outline" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Caribbean
+                        </button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="mergedIcon bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                        </svg>
+                        <div class="position-absolute placement-auto dropdown-menu dropdown-menu-top input-group p-0">
+                            <div>
+                                <input class="destInput form-control" type="text" placeholder="Going to"
+                                    list="location">
+                            </div>
+                            <hr class="m-0">
+                            <div class="scroll">
+                                <div class="px-3">
+                                    <div class="subHeading px-0">
+                                        Selected destinations
+                                    </div>
+                                    <div>
+                                        <button class="selectedDests">Caribbean <span>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                                                    fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                                </svg></span></button>
+                                        <button>Clear all</button>
+                                    </div>
+                                </div>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <div class="subHeading">Popular destinations</div>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Alaska">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Alaska
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Bahamas">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Bahamas
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Europe">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Europe
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Mexico">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Mexico
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <div class="subHeading">Other destinations</div>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Africa">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Africa
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Arctic/Antarctic">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Arctic / Antarctic
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Asia">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Asia
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Australia/New-Zealand">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Australia / New Zealand
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Bermuda">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Bermuda
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Canada/New-England">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Canada / New England
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Central-America">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Central America
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Galapagos">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Galapagos
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Gateway-at-sea">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Gateway at Sea
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Hawaii">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Hawaii
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Mid-East">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Middle East
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Pacific-Coastal">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Pacific Coastal
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Panama-Canal">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Panama Canal
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="South-America">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            South America
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="South-Pacific">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            South Pacific
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Transatlantic">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Transatlantic
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="Transpacific">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            Transpacific
+                                        </button>
+                                        <button type="button" class="dropdown-item d-block btn btn-outline"
+                                            data-bs-toggle="dropdown-item" aria-expanded="false"
+                                            data-bs-auto-close="outside" name="dest" value="World">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                            </svg>
+                                            World
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <hr class="m-0">
+                            <div class="scrollerFooter d-flex flex-row-reverse">
+                                <button type="submit" class="blueBtn btn btn-primary px-16">Done</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formDropdown">
+                        <input type="date">
+                    </div>
+                    <div class="formDropdown dropdown">
+                        <label for="duration" class="mergedLabel">Duration</label>
+                        <button type="button" id="duration" class="btn btn-outline" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            3 - 9 nights
+                        </button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="mergedIcon bi bi-clock" viewBox="0 0 16 16">
+                            <path
+                                d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                        </svg>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <h5 class="mb-3">Duration</h5>
+                            <section class="d-flex gap-2">
+                                <div class="mb-3 position-relative">
+                                    <label for="minNights" class="mergedLabel form-label">Min
+                                        nights</label>
+                                    <input type="number" class="form-control" id="minNights" value="3" name="minNights">
+                                </div>
+                                <div class="mb-3 position-relative">
+                                    <label for="maxNights" class="mergedLabel form-label">Max
+                                        nights</label>
+                                    <input type="number" class="form-control" id="maxNights" value="9" name="maxNights">
+                                </div>
+                            </section>
+                            <div class="d-flex flex-row-reverse">
+                                <button type="submit" class="blueBtn btn btn-primary py-3 px-16">Done</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="formDropdown dropdown">
+                        <label for="duration" class="mergedLabel">Travelers</label>
+                        <button type="button" id="duration" class="btn btn-outline" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">2 travelers, 1 cabin
+                        </button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="mergedIcon bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                        </svg>
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <section class="mb-3 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <label for="adults" class="text-body-secondary form-label lh-1">Adults</label>
+                                </div>
+                                <div>
+                                    <input type="number" class="text-body-secondary form-control p-1 text-center"
+                                        id="adults" min="1" max="5" value="2" name="adults">
+                                </div>
+                            </section>
+                            <section class="mb-3 d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <label for="children" class="text-body-secondary form-label lh-1">
+                                        <div>Children</div>
+                                        <div class="subLabel text-body-secondary">Ages 0 to 17</div>
+                                    </label>
+                                </div>
+                                <div>
+                                    <input type="number" class="form-control p-1 text-center" id="children" min="0"
+                                        max="5" value="0" name="children">
+                                </div>
+                            </section>
+
+
+                            <div class="d-flex flex-grow-1">
+                                <button type="submit"
+                                    class="flex-grow-1 blueBtn btn btn-primary py-3 px-16">Done</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="searchBtn blueBtn btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="d-flex">
+                    <form action="#" class="sideForm flex-column m-2" style="height: 49rem">
+                        <h3 class="fs-5">Filter by</h3>
+                        <div class="mt-4">
+                            <div class="subHeading">Departure ports</div>
+                            <div class="scrollable-dropdown position-relative formDropdown dropdown py-2">
+                                <button type="button" id="ports" class="labelBtn btn btn-outline pt-0"
+                                    data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                    e.g. Canada, Seattle, Florida,etc
+                                </button>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class=" mergedIcon bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                </svg>
+
+                                <div
+                                    class="position-absolute placement-auto dropdown-menu dropdown-menu-top input-group p-0">
+                                    <div>
+                                        <input class="destInput form-control" type="text" placeholder="Type to search"
+                                            list="ports">
+                                    </div>
+                                    <hr class="m-0">
+
+
+                                    <ul class="list-unstyled scroll">
+                                        <li>
+                                            <div class="subHeading"><b>Top 25 popular departure ports</b></div>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Miami">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Miami</div>
+                                                        <div>Florida, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="CapeCanaveral">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Cape Canaveral</div>
+                                                        <div>Florida, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="FortLauderdale">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Fort Lauderdale</div>
+                                                        <div>Florida, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Galveston">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Galveston</div>
+                                                        <div>Galveston County, Texas, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="NewOrleans">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>New Orleans</div>
+                                                        <div>Louisiana, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Mobile">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Mobile</div>
+                                                        <div>Alabama, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Baltimore">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Baltimore</div>
+                                                        <div>Maryland, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="SanJuan">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>San Juan</div>
+                                                        <div>Puerto Rico</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Bridgetown">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Bridgetown</div>
+                                                        <div>St. Michael, Barbados</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Boston">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Boston</div>
+                                                        <div>Massachusetts, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="LesAbymes">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Les Abymes</div>
+                                                        <div>Grande-Terre, Guadeloupe</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Oranjestad">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Oranjestad</div>
+                                                        <div>Aruba</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Fort-de-France">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Fort-de-France</div>
+                                                        <div>Martinique</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Norfolk">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Norfolk</div>
+                                                        <div>Norfolk City County, Virginia, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="LosAngeles">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Los Angeles</div>
+                                                        <div>California, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="PanamaCity">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Panama City</div>
+                                                        <div>Panama Province, Panama</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="LaRomana">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>La Romana</div>
+                                                        <div>La Romana, Dominican Republic</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Cartagena">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Cartagena</div>
+                                                        <div>Bolivar, Colombia</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Santiago">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Santiago</div>
+                                                        <div>Santiago Metropolitan Region, Chile</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Barcelona">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Barcelona</div>
+                                                        <div>Catalonia, Spain</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="SanFrancisco">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>San Francisco</div>
+                                                        <div>California, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="SanDiego">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>San Diego</div>
+                                                        <div>California, United States</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Montreal">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Montreal</div>
+                                                        <div>Quebec, Canada</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="LaRomana">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>La Romana</div>
+                                                        <div>La Romana, Dominican Republic</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                data-bs-auto-close="outside" name="port" value="Ushuaia">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-geo-alt-fill"
+                                                        viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                                                    </svg>
+                                                    <div class="d-flex flex-column">
+                                                        <div>Ushuaia</div>
+                                                        <div>Tierra del Fuego Province Argentina</div>
+                                                    </div>
+                                                </div>
+                                            </button>
+                                        </li>
+
+                                    </ul>
+                                    <hr class="m-0">
+                                    <div class="scrollerFooter d-flex flex-row-reverse">
+                                        <button type="submit"
+                                            class="blueBtn btn btn-primary px-16 disabled">Done</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="subHeading">Cruise lines</div>
+                                <div class="form-check py-2">
+                                    <input class="form-check-input border border-secondary border-2 rounded-0"
+                                        type="checkbox" name="cruise" value="celebrity" id="celebrity">
+                                    <label class="form-check-label" for="celebrity">
+                                        Celebrity Cruises
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="form-check-input border border-secondary border-2 rounded-0"
+                                        type="checkbox" name="cruise" value="disney" id="disney">
+                                    <label class="form-check-label" for="disney">
+                                        Disney Cruise Line
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="form-check-input border border-secondary border-2 rounded-0"
+                                        type="checkbox" name="cruise" value="MSC" id="MSC">
+                                    <label class="form-check-label" for="MSC">
+                                        MSC Cruises
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="form-check-input border border-secondary border-2 rounded-0"
+                                        type="checkbox" name="cruise" value="Norwegian" id="Norwegian">
+                                    <label class="form-check-label" for="Norwegian">
+                                        Norwegian Cruise Line
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="form-check-input border border-secondary border-2 rounded-0"
+                                        type="checkbox" name="cruise" value="princess" id="princess">
+                                    <label class="form-check-label" for="princess">
+                                        Princess Cruises
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="form-check-input border border-secondary border-2 rounded-0 p-0"
+                                        type="checkbox" name="cruise" value="Royal" id="Royal">
+                                    <label class="form-check-label" for="Royal">
+                                        Royal Caribbean International
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="subHeading">Ships</div>
+                                <div class="scrollable-dropdown position-relative formDropdown dropdown py-2">
+                                    <button type="button" id="ports" class="labelBtn btn btn-outline pt-0"
+                                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                                        e.g. Royal, Norwegian Encore, etc
+                                    </button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class=" mergedIcon bi bi-search" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+
+                                    <div
+                                        class="position-absolute placement-auto dropdown-menu dropdown-menu-top input-group p-0">
+                                        <div>
+                                            <input class="destInput form-control" type="text"
+                                                placeholder="Type to search" list="ports">
+                                        </div>
+                                        <hr class="m-0">
+
+
+                                        <ul class="list-unstyled scroll">
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="apex">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Apex</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="ascent">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Ascent</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="beyond">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Beyond</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="century">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Century</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="constellation">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Constellation</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="eclipse">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Eclipse</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="edge">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Edge</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="equinox">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Equinox</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="flora">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Flora</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="Infinity">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Infinity</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="millennium">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Millennium</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="reflection">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Reflection</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="silhouette">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Silhouette</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="solstice">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Solstice</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="summit">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Summit</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="xpedition">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Xpedition</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="xperience">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Xperience</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="dropdown-item d-block btn btn-outline"
+                                                    data-bs-toggle="dropdown-item" aria-expanded="false"
+                                                    data-bs-auto-close="outside" name="ship" value="xploration">
+                                                    <div class="d-flex align-items-center">
+
+                                                        <svg width="20" height="20" fill="currentColor"
+                                                            class="uitk-icon uitk-spacing uitk-spacing-padding-inlineend-three uitk-icon-medium"
+                                                            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <svg>
+                                                                <path
+                                                                    d="M20.34 10.96v1.68c0 .13-.06.24-.14.32-2.21 1.99-3.51 4.72-4.58 7.45-.24.62-.4 1.05-.48 1.3a.4.4 0 0 1-.39.29h-5.5a.4.4 0 0 1-.4-.3c-.07-.24-.23-.67-.47-1.3-1.06-2.7-2.4-5.47-4.58-7.44a.44.44 0 0 1-.14-.32v-1.68c0-.18.11-.33.3-.4l6.5-2.17c.23-.05.54.08.54.35L12 16l1-7.26c0-.28.3-.4.54-.35l6.5 2.16c.19.08.3.23.3.41zM5.83 8.2 12 6.12l6.17 2.07-1.72-3.14h1.66l-.47-1.37a.4.4 0 0 0-.39-.3h-4.14v-.97c0-.23-.2-.41-.4-.41H11.3c-.21 0-.41.18-.41.41v.98H6.75a.4.4 0 0 0-.4.29L5.9 5.05h1.66L5.83 8.19z">
+                                                                </path>
+                                                            </svg>
+                                                        </svg>
+                                                        <div class="d-flex flex-column">
+                                                            <div>Celebrity Xploration</div>
+                                                            <div>Celebrity Cruises</div>
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <hr class="m-0">
+                                        <div class="scrollerFooter d-flex flex-row-reverse">
+                                            <button type="submit"
+                                                class="blueBtn btn btn-primary px-16 disabled">Done</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <div class="subHeading mb-2">Cabin experience</div>
+                                <div class="form-check py-2">
+                                    <input class="ms-1 form-check-input border border-secondary border-2" type="radio"
+                                        name="cabin" value="any" id="any" checked>
+                                    <label class="form-check-label" for="any">
+                                        Any
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="ms-1 form-check-input border border-secondary border-2" type="radio"
+                                        name="cabin" value="inside" id="inside">
+                                    <label class="form-check-label" for="inside">
+                                        Inside
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="ms-1 form-check-input border border-secondary border-2" type="radio"
+                                        name="cabin" value="oceanview" id="oceanview">
+                                    <label class="form-check-label" for="oceanview">
+                                        Oceanview
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="ms-1 form-check-input border border-secondary border-2" type="radio"
+                                        name="cabin" value="balcony" id="balcony">
+                                    <label class="form-check-label" for="balcony">
+                                        Balcony
+                                    </label>
+                                </div>
+                                <div class="form-check py-2">
+                                    <input class="ms-1 form-check-input border border-secondary border-2" type="radio"
+                                        name="cabin" value="suite" id="suite">
+                                    <label class="form-check-label" for="suite">
+                                        Suite
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+                    <div class="cruiseResults">
+                        <div class="d-flex m-4 gap-3">
+                            <p class="subText">32 cruises found - Prices are per traveler, available within last 24
+                                hours and valid for
+                                US
+                                and Canadian residents only. Taxes, fees, and port expenses not included. Fuel
+                                supplement
+                                may apply.
+                            </p>
+                            <div class="dissapear formDropdown position-relative">
+                                <label for="sort" class="mergedLabel">Sort by</label>
+                                <select name="sort" id="sort" class="px-2">
+                                    <option value="priceLowest">Price (Lowest)</option>
+                                    <option value="priceHighest">Price (Highest)</option>
+                                    <option value="departureEarliest">Departure (Earliest)</option>
+                                    <option value="departureLatest">Departure (Latest)</option>
+                                    <option value="durationShortest">Duration (Shortest)</option>
+                                    <option value="durationLongest">Duration (Longest)</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div>
+                            <div class="signinSection d-flex m-4">
+                                <div class="circle d-flex align-items-center justify-content-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-tag" viewBox="0 0 16 16">
+                                        <path
+                                            d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z" />
+                                        <path
+                                            d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z" />
+                                    </svg>
+                                </div>
+                                <div class="signin d-flex gap-3">
+                                    <p class="ms-2 text-align-center m-auto">Save an average 10% on these cruises as a
+                                        signed
+                                        in
+                                        member</p>
+                                    <div class="m-auto">
+                                        <button type="button" class="blueBtn btn btn-primary ms-2 px-3 py-2">Sign
+                                            in</button>
+                                        <button type="button"
+                                            class="transBtn blueBtn btn btn-primary ms-1 px-2 py-2">Sign
+                                            up,
+                                            it's
+                                            free</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mx-4 mb-4 d-flex flex-column gap-3">
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-1" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/Caribbean-Princess-1.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-2.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-3.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-4.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-5.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#card-1"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#card-1"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">7 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/princess-cruises.png"
+                                                    alt="princess-cruises logo">Caribbean
+                                                Princess
+                                            </div>
+                                            <div>Jun 10, 2023 - Jun 17, 2023</div>
+                                            <div class="card-text">Fort Lauderdale, United States &bull; George Town,
+                                                Cayman
+                                                Islands &bull; Roatan, Bay Islands, Honduras and 2 more stops
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end pt-2">
+                                                <div class="price">&dollar;749</div>
+                                                <div class="smallLabel">inside cabin per traveler</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="expertSection d-flex ">
+                                    <div class="circle m-auto d-flex align-items-center justify-content-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+                                        </svg>
+                                    </div>
+                                    <div class="expert d-flex flex-column ms-2">
+                                        <h3>Get expert advice</h3>
+                                        <p class="text-align-center">If you have a question, or would like
+                                            personalized assistance booking your cruise, contact an Expedia Cruises™
+                                            travel
+                                            agent today.</p>
+                                        <div class="mt-2 d-flex gap-4">
+                                            <a href="#">1-866-403-9848</a>
+                                            <a href="#">Request a consultation</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-2" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/MSC-seaside-1.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-2.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-3.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-4.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-5.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#card-2"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#card-2"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">7 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/MSC-seaside.png" alt="princess-cruises logo">MSC
+                                                Seaside
+                                            </div>
+                                            <div>Jun 11, 2023 - Jun 18, 2023</div>
+                                            <div class="card-text">Port Canaveral, United States &bull; Ocean Cay MSC
+                                                Marine
+                                                Reserve (Private Island), Bahamas &bull; Costa Maya, Mexico and 1 more
+                                                stop
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end pt-2">
+                                                <div class="price">&dollar;749</div>
+                                                <div class="smallLabel">inside cabin per traveler</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card">
+                                    <div class=" row g-0">
+                                        <div class="col-sm-4 d-flex align-items-center">
+                                            <div id="card-3" class="carousel slide">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="files/NCL-1.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/NCL-2.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/NCL-3.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/NCL-4.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/NCL-5.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button"
+                                                    data-bs-target="#card-3" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button"
+                                                    data-bs-target="#card-3" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="card-body px-2 py-3 col-sm-11">
+                                                <h3 class="card-title">5 night Caribbean</h3>
+                                                <div>
+                                                    <img src="files/NCL.png" alt="NCL logo">Norwegian
+                                                    Sky
+                                                </div>
+                                                <div>Jun 27, 2023 - Jul 2, 2023</div>
+                                                <div class="card-text">Miami, United States &bull; Key West, United
+                                                    States
+                                                    &bull; Cozumel, Mexico and 1 more stop
+                                                </div>
+                                                <a href="#">Explore on Map</a>
+
+                                            </div>
+                                            <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                                <div class="d-flex flex-column align-items-end gap-2">
+                                                    <div class="badge">81&percnt; off</div>
+                                                    <div class="d-flex flex-column align-items-end">
+                                                        <div class="price d-flex ">
+                                                            <button class="bg-transparent border-0 p-0"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" fill="currentColor"
+                                                                    class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                                    <path
+                                                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                </svg><span>&dollar;4,286</span></button>
+                                                            <div>&dollar;799</div>
+                                                        </div>
+                                                        <div class="smallLabel">inside cabin per traveler</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-4" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/MSC-seaside-1.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-2.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-3.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-4.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seaside-5.JPG" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#card-4"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#card-4"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">7 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/MSC-seaside.png" alt="princess-cruises logo">MSC
+                                                Seaside
+                                            </div>
+                                            <div>Jun 25, 2023 - Jul 2, 2023</div>
+                                            <div class="card-text">Port Canaveral, United States &bull; Ocean Cay MSC
+                                                Marine
+                                                Reserve (Private Island), Bahamas &bull; Costa Maya, Mexico and 1 more
+                                                stop
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end gap-2">
+                                                <div class="badge">45&percnt; off</div>
+                                                <div>
+                                                    <div class="price d-flex ">
+                                                        <button class="bg-transparent border-0 p-0"><svg
+                                                                xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor"
+                                                                class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                                <path
+                                                                    d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                            </svg><span>&dollar;1,619</span></button>
+                                                        <div>&dollar;889</div>
+                                                    </div>
+                                                    <div class="smallLabel">balcony cabin per traveler</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-6" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/voyager-1.JPG" class="d-block w-100"
+                                                        alt="Voyager of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/voyager-1.JPG" class="d-block w-100"
+                                                        alt="Voyager of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/voyager-3.JPG" class="d-block w-100"
+                                                        alt="Voyager of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/voyager-4.JPG" class="d-block w-100"
+                                                        alt="Voyager of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/voyager-5.JPG" class="d-block w-100"
+                                                        alt="Voyager of the Seas">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#card-6"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#card-6"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">4 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/voyager.png" alt="Voyager of the Seas logo">Royal &bull;
+                                                Voyager of the Seas
+                                            </div>
+                                            <div>Jun 8, 2023 - Jun 12, 2023</div>
+                                            <div class="card-text">Galveston, United States &bull; Cozumel, Mexico
+                                                &bull;
+                                                Galveston, United States
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end pt-2">
+                                                <div class="price">&dollar;944</div>
+                                                <div class="smallLabel">inside cabin per traveler</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-7" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/Caribbean-Princess-1.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-2.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-3.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-4.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-5.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#card-7"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#card-7"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">7 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/princess-cruises.png"
+                                                    alt="princess-cruises logo">Caribbean
+                                                Princess
+                                            </div>
+                                            <div>Jun 10, 2023 - Jun 17, 2023</div>
+                                            <div class="card-text">Fort Lauderdale, United States &bull; George Town,
+                                                Cayman
+                                                Islands &bull; Roatan, Bay Islands, Honduras and 2 more stops
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end pt-2">
+                                                <div class="price">&dollar;948</div>
+                                                <div class="smallLabel">inside cabin per traveler</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-8" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/MSC-seascape-1.JPG" class="d-block w-100"
+                                                        alt="MSC-seascape">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seascape-2.JPG" class="d-block w-100"
+                                                        alt="MSC-seascape">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seascape-3.JPG" class="d-block w-100"
+                                                        alt="MSC-seascape">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seascape-4.JPG" class="d-block w-100"
+                                                        alt="MSC-seascape">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/MSC-seascape-5.JPG" class="d-block w-100"
+                                                        alt="MSC-seascape">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#card-8"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#card-8"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">7 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/MSC-seaside.png" alt="MSC-seascape logo">MSC
+                                                Seascape
+                                            </div>
+                                            <div>Jun 11, 2023 - Jun 18, 2023</div>
+                                            <div class="card-text">Miami, United States &bull; Puerto Plata, Dominican
+                                                Republic &bull; San Juan, Puerto Rico and 2 more stops
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end pt-2">
+                                                <div class="price">&dollar;949</div>
+                                                <div class="smallLabel">inside cabin per traveler</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-9" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/Allure-1.JPG" class="d-block w-100"
+                                                        alt="Allure of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Allure-2.JPG" class="d-block w-100"
+                                                        alt="Allure of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Allure-3.JPG" class="d-block w-100"
+                                                        alt="Allure of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Allure-4.JPG" class="d-block w-100"
+                                                        alt="Allure of the Seas">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Allure-5.JPG" class="d-block w-100"
+                                                        alt="Allure of the Seas">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#card-9"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#card-9"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">7 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/voyager.png" alt="Allure of the Seas logo">Royal &bull;
+                                                Allure of the Seas
+                                            </div>
+                                            <div>Jun 25, 2023 - Jul 2, 2023</div>
+                                            <div class="card-text">Galveston, United States &bull; Roatan, Bay Islands,
+                                                Honduras &bull;
+                                                Costa Maya, Mexico and 1 more stop
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end pt-2">
+                                                <div class="price">&dollar;1,045</div>
+                                                <div class="smallLabel">inside cabin per traveler</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card">
+                                    <div class=" row g-0">
+                                        <div class="col-sm-4 d-flex align-items-center">
+                                            <div id="card-10" class="carousel slide">
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <img src="files/Escape-1.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/Escape-2.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/Escape-3.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/Escape-4.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <img src="files/Escape-5.JPG" class="d-block w-100" alt="NCL">
+                                                    </div>
+                                                </div>
+                                                <button class="carousel-control-prev" type="button"
+                                                    data-bs-target="#card-10" data-bs-slide="prev">
+                                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Previous</span>
+                                                </button>
+                                                <button class="carousel-control-next" type="button"
+                                                    data-bs-target="#card-10" data-bs-slide="next">
+                                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                    <span class="visually-hidden">Next</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="card-body px-2 py-3 col-sm-11">
+                                                <h3 class="card-title">7 night Caribbean</h3>
+                                                <div>
+                                                    <img src="files/NCL.png" alt="NCL logo">Norwegian
+                                                    Escape
+                                                </div>
+                                                <div>Jun 11, 2023 - Jun 18, 2023</div>
+                                                <div class="card-text">Miami, United States &bull; Roatan, Bay Islands,
+                                                    Honduras
+                                                    &bull; Harvest Caye, Belize and 2 more stops
+                                                </div>
+                                                <a href="#">Explore on Map</a>
+
+                                            </div>
+                                            <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                                <div class="d-flex flex-column align-items-end gap-2">
+                                                    <div class="badge">81&percnt; off</div>
+                                                    <div class="d-flex flex-column align-items-end">
+                                                        <div class="price d-flex">
+                                                            <button class="bg-transparent border-0 p-0"><svg
+                                                                    xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                    height="16" fill="currentColor"
+                                                                    class="bi bi-info-circle" viewBox="0 0 16 16">
+                                                                    <path
+                                                                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                                                                    <path
+                                                                        d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                                                                </svg><span>&dollar;5,556</span></button>
+                                                            <div>&dollar;1,049</div>
+                                                        </div>
+                                                        <div class="smallLabel">inside cabin per traveler</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="card"">
+                                <div class=" row g-0">
+                                    <div class="col-sm-4 d-flex align-items-center">
+                                        <div id="card-11" class="carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="carousel-item active">
+                                                    <img src="files/Caribbean-Princess-1.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-2.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-3.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-4.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <img src="files/Caribbean-Princess-5.jpg" class="d-block w-100"
+                                                        alt="Caribbean-Princess">
+                                                </div>
+                                            </div>
+                                            <button class="carousel-control-prev" type="button"
+                                                data-bs-target="#card-11" data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Previous</span>
+                                            </button>
+                                            <button class="carousel-control-next" type="button"
+                                                data-bs-target="#card-11" data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="visually-hidden">Next</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        <div class="card-body px-2 py-3 col-sm-11">
+                                            <h3 class="card-title">7 night Caribbean</h3>
+                                            <div>
+                                                <img src="files/princess-cruises.png"
+                                                    alt="princess-cruises logo">Caribbean
+                                                Princess
+                                            </div>
+                                            <div>Jun 17, 2023 - Jun 24, 2023</div>
+                                            <div class="card-text">Fort Lauderdale, United States &bull; George Town,
+                                                Cayman
+                                                Islands &bull; Roatan, Bay Islands, Honduras and 2 more stops
+                                            </div>
+                                            <a href="#">Explore on Map</a>
+
+                                        </div>
+                                        <div class="card-footer bg-transparent d-flex flex-row-reverse">
+                                            <div class="d-flex flex-column align-items-end pt-2">
+                                                <div class="price">&dollar;1,098</div>
+                                                <div class="smallLabel">inside cabin per traveler</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="my-3 d-flex justify-content-center">
+                                <button type="button" class="whiteBtn">Show more</button>
+                            </div>
+                        </div>
+                        <div style="height: 1.5rem;"></div>
+                        <div class="feedback d-flex flex-column align-items-center">
+                            <div>Tell us how we can improve our site</div>
+                            <button type="button" class="whiteBtn">Share feedback</button>
+                        </div>
+                        <p class="mx-4 subText text-center">Savings advertised are based on specific cabin types
+                            and sailing dates,
+                            and may not be
+                            available for all cabin types/sailings.</p>
+                    </div>
+                </div>
+            </div>
+            <aside class="ad">
+                <div>
+                    <img src="https://tpc.googlesyndication.com/simgad/7390396242881249280?" width="160" height="600">
+                </div>
+                <div class="sticked-ad"><img width="160" height="600"
+                        src="https://tpc.googlesyndication.com/simgad/7661209491512934237?">
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="container-lg p-4 pb-5">
+        <div>
+            <a href="https://www.expediagroup.com/home/default.aspx"><img src="files/expedia-logo.svg"
+                    alt="expedia-logo"></a>
+        </div>
+        <ul class="d-flex flex-column flex-sm-row list-unstyled py-2">
+            <li class=" flex-grow-1">
+                <ul class="d-flex list-unstyled">
+                    <li class="firstCol flex-grow-1">
+                        <h3 class="subHeading pt-2">Company</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footerLink">About</a></li>
+                            <li><a href="#" class="footerLink">Jobs</a></li>
+                            <li><a href="#" class="footerLink">List your property</a></li>
+                            <li><a href="#" class="footerLink">Partnerships</a></li>
+                            <li><a href="#" class="footerLink">Investor Relations</a></li>
+                            <li><a href="#" class="footerLink">Advertising</a></li>
+                        </ul>
+                    </li>
+                    <li class="secCol flex-grow-1">
+                        <h3 class="subHeading pt-2">Explore</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footerLink">United States of America travel guide</a></li>
+                            <li><a href="#" class="footerLink">Hotels in United States of America</a></li>
+                            <li><a href="#" class="footerLink">Vacation rentals in United States of America</a></li>
+                            <li><a href="#" class="footerLink">Vacation packages in United States of America</a></li>
+                            <li><a href="#" class="footerLink">Domestic flights</a></li>
+                            <li><a href="#" class="footerLink">Car rentals in United States of America</a></li>
+                            <li><a href="#" class="footerLink">All accommodation types</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class=" flex-grow-1">
+                <ul class="d-flex list-unstyled">
+                    <li class="firstCol flex-grow-1">
+                        <h3 class="subHeading pt-2">Policies</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footerLink">Privacy</a></li>
+                            <li><a href="#" class="footerLink">Terms of use</a></li>
+                            <li><a href="#" class="footerLink">Vrbo terms and conditions</a></li>
+                            <li><a href="#" class="footerLink">Accessibility</a></li>
+                            <li><a href="#" class="footerLink">Your Privacy Choices</a></li>
+                        </ul>
+                    </li>
+                    <li class="secCol flex-grow-1">
+                        <h3 class="subHeading pt-2">Help</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="footerLink">Support</a></li>
+                            <li><a href="#" class="footerLink">Cancel your hotel or vacation rental booking</a></li>
+                            <li><a href="#" class="footerLink">Cancel your flight</a></li>
+                            <li><a href="#" class="footerLink">Refund timelines, policies &amp; processes</a></li>
+                            <li><a href="#" class="footerLink">Use an Expedia coupon</a></li>
+                            <li><a href="#" class="footerLink">International travel documents</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <hr class="my-4">
+        <div class="subText">Expedia, Inc. is not responsible for content on external Web sites.</div>
+        <div class="subText">&copy; 2023 Expedia, Inc., an Expedia Group company. All rights reserved. Expedia and the
+            Airplane Logo are
+            trademarks or registered trademarks of Expedia, Inc. CST# 2029030-50.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
